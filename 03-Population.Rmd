@@ -11,7 +11,7 @@ Population data of residence
 </br>
 
 | Field | Description |
-|------------:|-----------:|
+|:------------|:-----------|
 | std_yy | Baseline year |
 | std_mt | Baseline month |
 | sexdstn_cd | Sex |
