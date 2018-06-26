@@ -1,0 +1,73 @@
+# Traffic
+
+Traffic GIS DB
+- O-D Matrix </br>
+- Traffic Volume (67 within Seoul) </br>
+- Road network </br>
+- Bus(Regular, Intercity) </br>
+
+
+
+## Traffic facilities
+Traffic facilities are the geographic locations of bus stops and subway stations in Seoul. This dataset is provided by Seoul TOPIS(Transport Operation and Information Services, 서울시교통정보센터), and KAIS(Korean Address Information System, 국가주소정보시스템), during the period of January 2015 - August 2016. The data are saved in an excel sheet and a shape format.
+
+* EPSG(Coordinates): 5181(Korea 2000 Central Belt)
+
+In the folder, you will probably notice two sets of files, which either starts with TB_O_SB_STATN or TB_E_BUSSTOP: 
+
+| Type    | Description | Code |
+|:--------|:------------|:------------|
+| `Facilities` | Subway location | `TB_O_SB_STATN`|
+| `Facilities` | Bus location    | `TB_E_BUSSTOP` |
+</br>
+* Bus stop: Attributes
+
+| NO| Attribute Name     | Note |
+|:--|:-------------------|:------------|
+| 1 |  `ID`              |  |
+| 2 |  `Bus stop number` |  |
+| 3 |  `Bust stop name`  |  |
+| 4 |  `Year`            | Jan.2015-Aug.2016 |
+| 5 |  `TM-X`            |  |
+| 6 |  `TM-Y`            |  |
+</br>
+
+* Bus stop: Shape file attributes (EPSG:5181)
+
+| NO| Column Code  | Column Name |
+|:--|:-------------|:------------|
+| 1 |  `YYYYMM`    |  Year+Month |
+| 2 |  `LINE_NO`   |  Bus number |
+| 3 |  `SEQ_NO`    |  Order      |
+| 4 |  `BUS_STA_NM`|  Bus stop name |
+| 5 |  `X_COORD`   |  X coordinate |
+| 6 |  `Y_COORD`   |  Y coordinate |
+| 7 |  `ARSID`     |  Reference |
+</br>
+
+* Subway: Attributes
+
+| NO| Attribute Name  | Note |
+|:--|:----------------|:------------|
+| 1 |  `ID`           |  |
+| 2 |  `Station name` |  |
+| 3 |  `Line number`  |  |
+| 4 |  `Year`         | Jan.2015-Aug.2016 |
+| 5 |  `TM-X`         |  |
+| 6 |  `TM-Y`         |  |
+</br>
+
+* Subway: Shape file attributes (EPSG:5181)
+
+| NO| Column Code  | Column Name |
+|:--|:-------------|:------------|
+| 1 |  `GU_NM`     | Year+Month |
+| 2 |  `GU_CD`     | Bus number |
+| 3 |  `SUB_STA_SN`| Order      |
+| 4 |  `KOR_SUB_NM`| Bus stop name |
+| 5 |  `Point_X`   | X coordinate |
+| 6 |  `Point_Y`   | Y coordinate |
+</br>
+
+
+

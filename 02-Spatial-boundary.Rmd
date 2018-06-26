@@ -1,0 +1,71 @@
+# Spatial Boundary
+
+## Administrative District *(Gu)*
+A sub municipal unit in South Korea. Cities over 500,000 people are allowed to have a gu.
+
+- Total number in Seoul: 25
+- Coordinate system: Korean Central Belt 2000 (EPSG: 5181)
+- Columns: City code, Gu code, Gu name, Gu area
+- Largest / Smallest
+- Area: Seocho(47km2) / Jung(9.96km2)
+- Population: Songpa(640,830) / Jung(117,781)
+
+```{r, echo=FALSE, fig.height=8, fig.width=6, fig.show='hold',fig.align='center',fig.cap="\\label{fig:figs}Gu in Seoul"}
+knitr::include_graphics("images/03_gu.png")
+```
+
+## Census tracts *(Dong)*
+The smallest level of urban government to have its own office and staff in South Korea</br>
+
+Types: administrative dong, legal-status dong
+
+- Administrative dong: Name of the community office that controls the place. All administrative works as well as clinics are based on this level
+- Legal-status dong: A traditional area (town, village) name. The name of a unique region that serves as an address
+
+
+Total number
+
+- Administrative dong (2014): 423
+- Legal-status dong (2014): 469
+- Coordinate system: Korean Central Belt 2000 (EPSG: 5181)
+- Columns: Base year, admin code, admin name
+- Largest / Smallest
+- Population: Gil-dong, Songpa-gu (49,535) / Sogong-dong, Jung-gu (735)
+
+
+
+## Administrative Census Block *(Jipgegu)*
+Developed boundary map of the smallest(block) unit among the boundaries announced by the National Statistic Office(NSO)
+
+- Reference : NSO
+- Time Period : 2015
+- Data Collected: 1 year
+- Data Type : .csv, .shp
+- Spatial range : Seoul
+- Coordinate system: Korean Central Belt 2000 (EPSG: 5181)
+
+
+Table: (\#tab:foo) Jipgegu Attribution field
+
+| Field       |Field Description| 
+|:------------|:-----------|
+| Block code | Name of block|
+| Block name | X-coord of block cell centre|
+| Centriod X-coord | X-coord of block cell centre|
+| Centriod Y-coord | Y-coord of block cell centre|
+| Census tract code | Tract code|
+| City code | City code|
+| Type of block | Large, Medium, Small |
+| Type of block buffer | Large, Medium, Small|
+| Station influenced area | Block proximity to Station|
+| University area | Block proximity to a University zone|
+
+
+
+Providing a spatial unit that understands a specific area (100 persons per block) </br>
+Providing a spatial unit that further subdivides administrative boundaries, such as dong,
+for finer analysis of market characteristics in the region </br>
+The number of block accounts for 20% of NSO block </br>
+Resident blocks in non-apartment accounts for 60-80 persons
+
+

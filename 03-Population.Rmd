@@ -1,0 +1,54 @@
+# Population
+
+## Population Census
+Population data of residence
+
+- Reference: Korean Statistics Office
+- Time Period : 2011 - 2015
+- Data Collected: Monthly
+- Data Type : .csv
+- Spatial range : Seoul
+</br>
+
+| Field | Description |
+|------------:|-----------:|
+| std_yy | Baseline year |
+| std_mt | Baseline month |
+| sexdstn_cd | Sex |
+| agrde_cd | Age group |
+| rspop_cnt | Population |
+| adstrd_cd | Census tract code |
+| signgu_cd | City code |
+
+</br>
+</br>
+
+
+## Employees at Working place
+Data on the number of employees per census block, based on the basic survey data of the business
+
+• Reference: Seoul city 
+• Time Period : 2011 - 2013
+• Data Collected: Annually
+• Data Type : .csv
+• Spatial range : Seoul
+</br>
+
+
+## De Facto Population
+구분: 인구/가구 </br>
+데이터셋명: 생활인구 </br>
+자료유형: 속성(csv) </br>
+시간범위: 2017.01.01-2018.04.18 </br>
+공간범위: 서울전역 </br>
+적재주기: 월 </br>
+제공기관: KT </br>
+
+파일명:</br>
+- 내국인: SE_SPOP_LOCAL_RESD_YYMM </br>
+- 외국단기: SE_SPOP_TEMP_RESD_YYMM </br>
+- 외국장기: SE_SPOP_LONG_RESD_YYMM </br>
+- 대도시권 생활인구: SE_SPOP_ORGN_CT_YYMM </br>
+- 데이터셋설명: 생활인구란 거주인구가 아닌 실제로 생활하는 인구로, 1시간 단위로 서울시 전체, 자치구별, 행정동별, 집계구별로 서울을 커버하는 KT의 통신기지국(LTE 시그널 데이터 기반)에 존재하는 인구를 기초로 추정함. LTE가입률이 떨어지는 저연령과 고연령층은 주민등록인구비율을 반영하여 생활인구를 대체함. 그리고 장단기체류 외국인은 국내 휴대폰에 가입한 외국인의 이용정보와 국내의 로밍서비스를 받는 외국인 정보를 활용하여 생활인구 추계과정과 동일하게 접근하고 국적별로 보정함. '대도시권' 데이터는 생활인구 데이터에 대도시권의 거주지 코드를 포함한 데이터임
+추정된 데이터로 소수점(5자리) 이하값이 있으며, 각 값의 합은 전체합계와 일치하지 않을 수 있음
+
