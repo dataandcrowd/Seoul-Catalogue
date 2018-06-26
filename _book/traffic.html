@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="patients.html">
-
+<link rel="prev" href="population.html">
+<link rel="next" href="pollution.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -107,17 +107,230 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered">
-<h1>References</h1>
+<div id="traffic" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> Traffic</h1>
+<p>Traffic GIS DB - O-D Matrix </br> - Traffic Volume (67 within Seoul) </br> - Road network </br> - Bus(Regular, Intercity) </br></p>
+<div id="traffic-facilities" class="section level2">
+<h2><span class="header-section-number">4.1</span> Traffic facilities</h2>
+<p>Traffic facilities are the geographic locations of bus stops and subway stations in Seoul. This dataset is provided by Seoul TOPIS(Transport Operation and Information Services, 서울시교통정보센터), and KAIS(Korean Address Information System, 국가주소정보시스템), during the period of January 2015 - August 2016. The data are saved in an excel sheet and a shape format.</p>
+<ul>
+<li>EPSG(Coordinates): 5181(Korea 2000 Central Belt)</li>
+</ul>
+<p>In the folder, you will probably notice two sets of files, which either starts with TB_O_SB_STATN or TB_E_BUSSTOP:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Type</th>
+<th align="left">Description</th>
+<th align="left">Code</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>Facilities</code></td>
+<td align="left">Subway location</td>
+<td align="left"><code>TB_O_SB_STATN</code></td>
+</tr>
+<tr class="even">
+<td align="left"><code>Facilities</code></td>
+<td align="left">Bus location</td>
+<td align="left"><code>TB_E_BUSSTOP</code></td>
+</tr>
+</tbody>
+</table>
+<p></br> * Bus stop: Attributes</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">NO</th>
+<th align="left">Attribute Name</th>
+<th align="left">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left"><code>ID</code></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left"><code>Bus stop number</code></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left"><code>Bust stop name</code></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left"><code>Year</code></td>
+<td align="left">Jan.2015-Aug.2016</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left"><code>TM-X</code></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left"><code>TM-Y</code></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p></br></p>
+<ul>
+<li>Bus stop: Shape file attributes (EPSG:5181)</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="left">NO</th>
+<th align="left">Column Code</th>
+<th align="left">Column Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left"><code>YYYYMM</code></td>
+<td align="left">Year+Month</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left"><code>LINE_NO</code></td>
+<td align="left">Bus number</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left"><code>SEQ_NO</code></td>
+<td align="left">Order</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left"><code>BUS_STA_NM</code></td>
+<td align="left">Bus stop name</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left"><code>X_COORD</code></td>
+<td align="left">X coordinate</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left"><code>Y_COORD</code></td>
+<td align="left">Y coordinate</td>
+</tr>
+<tr class="odd">
+<td align="left">7</td>
+<td align="left"><code>ARSID</code></td>
+<td align="left">Reference</td>
+</tr>
+</tbody>
+</table>
+<p></br></p>
+<ul>
+<li>Subway: Attributes</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="left">NO</th>
+<th align="left">Attribute Name</th>
+<th align="left">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left"><code>ID</code></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left"><code>Station name</code></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left"><code>Line number</code></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left"><code>Year</code></td>
+<td align="left">Jan.2015-Aug.2016</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left"><code>TM-X</code></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left"><code>TM-Y</code></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p></br></p>
+<ul>
+<li>Subway: Shape file attributes (EPSG:5181)</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th align="left">NO</th>
+<th align="left">Column Code</th>
+<th align="left">Column Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left"><code>GU_NM</code></td>
+<td align="left">Year+Month</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left"><code>GU_CD</code></td>
+<td align="left">Bus number</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left"><code>SUB_STA_SN</code></td>
+<td align="left">Order</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left"><code>KOR_SUB_NM</code></td>
+<td align="left">Bus stop name</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left"><code>Point_X</code></td>
+<td align="left">X coordinate</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left"><code>Point_Y</code></td>
+<td align="left">Y coordinate</td>
+</tr>
+</tbody>
+</table>
+<p></br></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="patients.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="population.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="pollution.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

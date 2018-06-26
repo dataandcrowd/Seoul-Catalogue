@@ -8,7 +8,8 @@
 - Currency: Won
 
 ## City Hierarchy
-```{r, echo=FALSE, fig.height=8, fig.width=6, fig.show="hold" fig.align= "center"} 
+
+```{r, echo=FALSE, fig.height=8, fig.width=6, fig.show= "hold", fig.align= "center"}
 knitr::include_graphics("images/02_boundary.png")
 ```
 

@@ -31,46 +31,6 @@
 \urlstyle{same}  % don't use monospace font for urls
 \usepackage{natbib}
 \bibliographystyle{apalike}
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\usepackage{framed}
-\definecolor{shadecolor}{RGB}{248,248,248}
-\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
 \usepackage{longtable,booktabs}
 \usepackage{graphicx,grffile}
 \makeatletter
@@ -125,7 +85,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{r Sys.Date()}
+    \date{2018-06-26}
 
 \usepackage{booktabs}
 
@@ -159,106 +119,350 @@ industry, traffic, society, hospitality, and environment. Note that this
 page hasn't got any license to it, so you can look through my
 explanation and examples, and copy them without permission.
 
-\begin{center}\includegraphics{images/01_intro} \end{center}
+\begin{center}\includegraphics[width=19.47in]{images/01_intro} \end{center}
 
-\chapter{Introduction}\label{intro}
+\chapter{Introduction of Seoul}\label{introduction-of-seoul}
 
-You can label chapter and section titles using \texttt{\{\#label\}}
-after them, e.g., we can reference Chapter \ref{intro}. If you do not
-manually label them, there will be automatic labels anyway, e.g.,
-Chapter \ref{methods}.
+\section{Overview}\label{overview}
 
-Figures and tables with captions will be placed in \texttt{figure} and
-\texttt{table} environments, respectively.
+\begin{itemize}
+\tightlist
+\item
+  Capital of South Korea
+\item
+  Area: 605.21 km2 (233.67 sq mi)
+\item
+  Population: 9,971,111 (678,102 international residents, 2015 NSO)
+\item
+  Language: Korean
+\item
+  Currency: Won
+\end{itemize}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\KeywordTok{par}\NormalTok{(}\DataTypeTok{mar =} \KeywordTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{4}\NormalTok{, .}\DecValTok{1}\NormalTok{, .}\DecValTok{1}\NormalTok{))}
-\KeywordTok{plot}\NormalTok{(pressure, }\DataTypeTok{type =} \StringTok{'b'}\NormalTok{, }\DataTypeTok{pch =} \DecValTok{19}\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+\section{City Hierarchy}\label{city-hierarchy}
+
+\begin{center}\includegraphics[width=16.82in]{images/02_boundary} \end{center}
+
+The city has four hierarchies, Si, Gu, Dong, and \emph{Jipgegu}, from
+city to block level. Within the \emph{Si}(city) scale, Seoul has 25
+administrative districts, gu, of which the spatial size is similar to
+the boroughs in London. The river Han penetrates horizontally through
+the city centre, from east to west, which divides 14 gus to the north,
+and 11 to the south. Each gu comprises two types of boundaries as
+\emph{Hengjeong dong}s and \emph{Beopjeong dong}s. \emph{Hengjeong
+dong}s were established for administrative convenience, such as resident
+registration. These \emph{dong}s could be consolidated, divided, or
+founded due to population increase or decrease. \emph{Beopjeong dong}s
+are towns or villages that were left for historical significance (Legal
+dongs were based on cadastral maps made from the Land investigation
+project during the Japanese colonial years). As of 2014, Seoul has 424
+administrative dongs and 467 legal dongs. The finest scale is
+\emph{Jipgegu}, or census block. This boundary is mainly to retrieve the
+population from a minimum statistical area, thus does not function as an
+administrative unit. Each Jipgegu consists of 60-500 residents, and the
+boundaries are renewed every year. As of 2013, Seoul has 16,470
+jipgegus. All boundary data were provided in a shapefile in a 5-year
+period from 1975-2015, except the \emph{Jipgegu} where the last update
+was in 2015.
+
+\chapter{Spatial Boundary}\label{spatial-boundary}
+
+\section{\texorpdfstring{Administrative District
+\emph{(Gu)}}{Administrative District (Gu)}}\label{administrative-district-gu}
+
+A sub municipal unit in South Korea. Cities over 500,000 people are
+allowed to have a gu.
+
+\begin{itemize}
+\tightlist
+\item
+  Total number in Seoul: 25
+\item
+  Coordinate system: Korean Central Belt 2000 (EPSG: 5181)
+\item
+  Columns: City code, Gu code, Gu name, Gu area
+\item
+  Largest / Smallest
+\item
+  Area: Seocho(47km2) / Jung(9.96km2)
+\item
+  Population: Songpa(640,830) / Jung(117,781)
+\end{itemize}
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.8\linewidth]{catalogue_files/figure-latex/nice-fig-1} 
+{\centering \includegraphics[width=21.57in]{images/03_gu} 
 
 }
 
-\caption{Here is a nice figure!}\label{fig:nice-fig}
+\caption{\label{fig:figs}Gu in Seoul}\label{fig:unnamed-chunk-3}
 \end{figure}
 
-Reference a figure by its code chunk label with the \texttt{fig:}
-prefix, e.g., see Figure \ref{fig:nice-fig}. Similarly, you can
-reference tables generated from \texttt{knitr::kable()}, e.g., see Table
-\ref{tab:nice-tab}.
+\section{\texorpdfstring{Census tracts
+\emph{(Dong)}}{Census tracts (Dong)}}\label{census-tracts-dong}
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\OperatorTok{::}\KeywordTok{kable}\NormalTok{(}
-  \KeywordTok{head}\NormalTok{(iris, }\DecValTok{20}\NormalTok{), }\DataTypeTok{caption =} \StringTok{'Here is a nice table!'}\NormalTok{,}
-  \DataTypeTok{booktabs =} \OtherTok{TRUE}
-\NormalTok{)}
-\end{Highlighting}
-\end{Shaded}
+The smallest level of urban government to have its own office and staff
+in South Korea
 
-\begin{table}
+Types: administrative dong, legal-status dong
 
-\caption{\label{tab:nice-tab}Here is a nice table!}
-\centering
-\begin{tabular}[t]{rrrrl}
+\begin{itemize}
+\tightlist
+\item
+  Administrative dong: Name of the community office that controls the
+  place. All administrative works as well as clinics are based on this
+  level
+\item
+  Legal-status dong: A traditional area (town, village) name. The name
+  of a unique region that serves as an address
+\end{itemize}
+
+Total number
+
+\begin{itemize}
+\tightlist
+\item
+  Administrative dong (2014): 423
+\item
+  Legal-status dong (2014): 469
+\item
+  Coordinate system: Korean Central Belt 2000 (EPSG: 5181)
+\item
+  Columns: Base year, admin code, admin name
+\item
+  Largest / Smallest
+\item
+  Population: Gil-dong, Songpa-gu (49,535) / Sogong-dong, Jung-gu (735)
+\end{itemize}
+
+\section{\texorpdfstring{Administrative Census Block
+\emph{(Jipgegu)}}{Administrative Census Block (Jipgegu)}}\label{administrative-census-block-jipgegu}
+
+Developed boundary map of the smallest(block) unit among the boundaries
+announced by the National Statistic Office(NSO)
+
+\begin{itemize}
+\tightlist
+\item
+  Reference : NSO
+\item
+  Time Period : 2015
+\item
+  Data Collected: 1 year
+\item
+  Data Type : .csv, .shp
+\item
+  Spatial range : Seoul
+\item
+  Coordinate system: Korean Central Belt 2000 (EPSG: 5181)
+\end{itemize}
+
+\begin{longtable}[]{@{}ll@{}}
+\caption{\label{tab:foo} Jipgegu Attribution field}\tabularnewline
 \toprule
-Sepal.Length & Sepal.Width & Petal.Length & Petal.Width & Species\\
+Field & Field Description\tabularnewline
 \midrule
-5.1 & 3.5 & 1.4 & 0.2 & setosa\\
-4.9 & 3.0 & 1.4 & 0.2 & setosa\\
-4.7 & 3.2 & 1.3 & 0.2 & setosa\\
-4.6 & 3.1 & 1.5 & 0.2 & setosa\\
-5.0 & 3.6 & 1.4 & 0.2 & setosa\\
-\addlinespace
-5.4 & 3.9 & 1.7 & 0.4 & setosa\\
-4.6 & 3.4 & 1.4 & 0.3 & setosa\\
-5.0 & 3.4 & 1.5 & 0.2 & setosa\\
-4.4 & 2.9 & 1.4 & 0.2 & setosa\\
-4.9 & 3.1 & 1.5 & 0.1 & setosa\\
-\addlinespace
-5.4 & 3.7 & 1.5 & 0.2 & setosa\\
-4.8 & 3.4 & 1.6 & 0.2 & setosa\\
-4.8 & 3.0 & 1.4 & 0.1 & setosa\\
-4.3 & 3.0 & 1.1 & 0.1 & setosa\\
-5.8 & 4.0 & 1.2 & 0.2 & setosa\\
-\addlinespace
-5.7 & 4.4 & 1.5 & 0.4 & setosa\\
-5.4 & 3.9 & 1.3 & 0.4 & setosa\\
-5.1 & 3.5 & 1.4 & 0.3 & setosa\\
-5.7 & 3.8 & 1.7 & 0.3 & setosa\\
-5.1 & 3.8 & 1.5 & 0.3 & setosa\\
+\endfirsthead
+\toprule
+Field & Field Description\tabularnewline
+\midrule
+\endhead
+Block code & Name of block\tabularnewline
+Block name & X-coord of block cell centre\tabularnewline
+Centriod X-coord & X-coord of block cell centre\tabularnewline
+Centriod Y-coord & Y-coord of block cell centre\tabularnewline
+Census tract code & Tract code\tabularnewline
+City code & City code\tabularnewline
+Type of block & Large, Medium, Small\tabularnewline
+Type of block buffer & Large, Medium, Small\tabularnewline
+Station influenced area & Block proximity to Station\tabularnewline
+University area & Block proximity to a University zone\tabularnewline
 \bottomrule
-\end{tabular}
-\end{table}
+\end{longtable}
 
-You can write citations, too. For example, we are using the
-\textbf{bookdown} package \citep{R-bookdown} in this sample book, which
-was built on top of R Markdown and \textbf{knitr} \citep{xie2015}.
+Providing a spatial unit that understands a specific area (100 persons
+per block) Providing a spatial unit that further subdivides
+administrative boundaries, such as dong, for finer analysis of market
+characteristics in the region The number of block accounts for 20\% of
+NSO block Resident blocks in non-apartment accounts for 60-80 persons
 
-\chapter{Literature}\label{literature}
+\chapter{Population}\label{population}
 
-Here is a review of existing methods.
+\section{Population Census}\label{population-census}
 
-\chapter{Methods}\label{methods}
+Population data of residence
 
-We describe our methods in this chapter.
+\begin{itemize}
+\tightlist
+\item
+  Reference: Korean Statistics Office
+\item
+  Time Period : 2011 - 2015
+\item
+  Data Collected: Monthly
+\item
+  Data Type : .csv
+\item
+  Spatial range : Seoul 
+\end{itemize}
 
-\chapter{Applications}\label{applications}
+\begin{longtable}[]{@{}rr@{}}
+\toprule
+Field & Description\tabularnewline
+\midrule
+\endhead
+std\_yy & Baseline year\tabularnewline
+std\_mt & Baseline month\tabularnewline
+sexdstn\_cd & Sex\tabularnewline
+agrde\_cd & Age group\tabularnewline
+rspop\_cnt & Population\tabularnewline
+adstrd\_cd & Census tract code\tabularnewline
+signgu\_cd & City code\tabularnewline
+\bottomrule
+\end{longtable}
 
-Some \emph{significant} applications are demonstrated in this chapter.
+\section{Employees at Working place}\label{employees-at-working-place}
 
-\section{Example one}\label{example-one}
+Data on the number of employees per census block, based on the basic
+survey data of the business
 
-\section{Example two}\label{example-two}
+• Reference: Seoul city • Time Period : 2011 - 2013 • Data Collected:
+Annually • Data Type : .csv • Spatial range : Seoul
 
-\chapter{Final Words}\label{final-words}
+\section{De Facto Population}\label{de-facto-population}
 
-We have finished a nice book.
+구분: 인구/가구 데이터셋명: 생활인구 자료유형: 속성(csv) 시간범위:
+2017.01.01-2018.04.18 공간범위: 서울전역 적재주기: 월 제공기관: KT
+
+파일명: - 내국인: SE\_SPOP\_LOCAL\_RESD\_YYMM - 외국단기:
+SE\_SPOP\_TEMP\_RESD\_YYMM - 외국장기: SE\_SPOP\_LONG\_RESD\_YYMM -
+대도시권 생활인구: SE\_SPOP\_ORGN\_CT\_YYMM - 데이터셋설명: 생활인구란
+거주인구가 아닌 실제로 생활하는 인구로, 1시간 단위로 서울시 전체,
+자치구별, 행정동별, 집계구별로 서울을 커버하는 KT의 통신기지국(LTE
+시그널 데이터 기반)에 존재하는 인구를 기초로 추정함. LTE가입률이
+떨어지는 저연령과 고연령층은 주민등록인구비율을 반영하여 생활인구를
+대체함. 그리고 장단기체류 외국인은 국내 휴대폰에 가입한 외국인의
+이용정보와 국내의 로밍서비스를 받는 외국인 정보를 활용하여 생활인구
+추계과정과 동일하게 접근하고 국적별로 보정함. `대도시권' 데이터는
+생활인구 데이터에 대도시권의 거주지 코드를 포함한 데이터임 추정된
+데이터로 소수점(5자리) 이하값이 있으며, 각 값의 합은 전체합계와 일치하지
+않을 수 있음
+
+\chapter{Traffic}\label{traffic}
+
+Traffic GIS DB - O-D Matrix - Traffic Volume (67 within Seoul) - Road
+network - Bus(Regular, Intercity)
+
+\section{Traffic facilities}\label{traffic-facilities}
+
+Traffic facilities are the geographic locations of bus stops and subway
+stations in Seoul. This dataset is provided by Seoul TOPIS(Transport
+Operation and Information Services, 서울시교통정보센터), and KAIS(Korean
+Address Information System, 국가주소정보시스템), during the period of
+January 2015 - August 2016. The data are saved in an excel sheet and a
+shape format.
+
+\begin{itemize}
+\tightlist
+\item
+  EPSG(Coordinates): 5181(Korea 2000 Central Belt)
+\end{itemize}
+
+In the folder, you will probably notice two sets of files, which either
+starts with TB\_O\_SB\_STATN or TB\_E\_BUSSTOP:
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Type & Description & Code\tabularnewline
+\midrule
+\endhead
+\texttt{Facilities} & Subway location &
+\texttt{TB\_O\_SB\_STATN}\tabularnewline
+\texttt{Facilities} & Bus location &
+\texttt{TB\_E\_BUSSTOP}\tabularnewline
+\bottomrule
+\end{longtable}
+
+ * Bus stop: Attributes
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+NO & Attribute Name & Note\tabularnewline
+\midrule
+\endhead
+1 & \texttt{ID} &\tabularnewline
+2 & \texttt{Bus\ stop\ number} &\tabularnewline
+3 & \texttt{Bust\ stop\ name} &\tabularnewline
+4 & \texttt{Year} & Jan.2015-Aug.2016\tabularnewline
+5 & \texttt{TM-X} &\tabularnewline
+6 & \texttt{TM-Y} &\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\tightlist
+\item
+  Bus stop: Shape file attributes (EPSG:5181)
+\end{itemize}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+NO & Column Code & Column Name\tabularnewline
+\midrule
+\endhead
+1 & \texttt{YYYYMM} & Year+Month\tabularnewline
+2 & \texttt{LINE\_NO} & Bus number\tabularnewline
+3 & \texttt{SEQ\_NO} & Order\tabularnewline
+4 & \texttt{BUS\_STA\_NM} & Bus stop name\tabularnewline
+5 & \texttt{X\_COORD} & X coordinate\tabularnewline
+6 & \texttt{Y\_COORD} & Y coordinate\tabularnewline
+7 & \texttt{ARSID} & Reference\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\tightlist
+\item
+  Subway: Attributes
+\end{itemize}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+NO & Attribute Name & Note\tabularnewline
+\midrule
+\endhead
+1 & \texttt{ID} &\tabularnewline
+2 & \texttt{Station\ name} &\tabularnewline
+3 & \texttt{Line\ number} &\tabularnewline
+4 & \texttt{Year} & Jan.2015-Aug.2016\tabularnewline
+5 & \texttt{TM-X} &\tabularnewline
+6 & \texttt{TM-Y} &\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{itemize}
+\tightlist
+\item
+  Subway: Shape file attributes (EPSG:5181)
+\end{itemize}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+NO & Column Code & Column Name\tabularnewline
+\midrule
+\endhead
+1 & \texttt{GU\_NM} & Year+Month\tabularnewline
+2 & \texttt{GU\_CD} & Bus number\tabularnewline
+3 & \texttt{SUB\_STA\_SN} & Order\tabularnewline
+4 & \texttt{KOR\_SUB\_NM} & Bus stop name\tabularnewline
+5 & \texttt{Point\_X} & X coordinate\tabularnewline
+6 & \texttt{Point\_Y} & Y coordinate\tabularnewline
+\bottomrule
+\end{longtable}
+
+\chapter{Pollution}\label{pollution}
+
+\chapter{Patients}\label{patients}
 
 \bibliography{book.bib,packages.bib}
 

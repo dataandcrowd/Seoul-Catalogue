@@ -16,6 +16,6 @@ Hello, welcome to this website! This site offers a handful of data from Seoul, i
 population, housing, landuse, industry, traffic, society, hospitality, and environment. Note that this page hasn't got
 any license to it, so you can look through my explanation and examples, and copy them without permission.
 
-```{r, echo=FALSE, fig.height=8, fig.width=6, fig.show='hold',fig.align='center'}
+```{r, echo=FALSE, fig.height=8, fig.width=6, fig.show= "hold", fig.align= "center"}
 knitr::include_graphics("images/01_intro.png")
 ```

@@ -32,8 +32,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="patients.html">
-
+<link rel="prev" href="introduction-of-seoul.html">
+<link rel="next" href="population.html">
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -107,17 +107,117 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered">
-<h1>References</h1>
+<div id="spatial-boundary" class="section level1">
+<h1><span class="header-section-number">Chapter 2</span> Spatial Boundary</h1>
+<div id="administrative-district-gu" class="section level2">
+<h2><span class="header-section-number">2.1</span> Administrative District <em>(Gu)</em></h2>
+<p>A sub municipal unit in South Korea. Cities over 500,000 people are allowed to have a gu.</p>
+<ul>
+<li>Total number in Seoul: 25</li>
+<li>Coordinate system: Korean Central Belt 2000 (EPSG: 5181)</li>
+<li>Columns: City code, Gu code, Gu name, Gu area</li>
+<li>Largest / Smallest</li>
+<li>Area: Seocho(47km2) / Jung(9.96km2)</li>
+<li>Population: Songpa(640,830) / Jung(117,781)</li>
+</ul>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<img src="images/03_gu.png" alt="\label{fig:figs}Gu in Seoul" width="776" />
+<p class="caption">
+Figure 2.1: Gu in Seoul
+</p>
+</div>
+</div>
+<div id="census-tracts-dong" class="section level2">
+<h2><span class="header-section-number">2.2</span> Census tracts <em>(Dong)</em></h2>
+<p>The smallest level of urban government to have its own office and staff in South Korea</br></p>
+<p>Types: administrative dong, legal-status dong</p>
+<ul>
+<li>Administrative dong: Name of the community office that controls the place. All administrative works as well as clinics are based on this level</li>
+<li>Legal-status dong: A traditional area (town, village) name. The name of a unique region that serves as an address</li>
+</ul>
+<p>Total number</p>
+<ul>
+<li>Administrative dong (2014): 423</li>
+<li>Legal-status dong (2014): 469</li>
+<li>Coordinate system: Korean Central Belt 2000 (EPSG: 5181)</li>
+<li>Columns: Base year, admin code, admin name</li>
+<li>Largest / Smallest</li>
+<li>Population: Gil-dong, Songpa-gu (49,535) / Sogong-dong, Jung-gu (735)</li>
+</ul>
+</div>
+<div id="administrative-census-block-jipgegu" class="section level2">
+<h2><span class="header-section-number">2.3</span> Administrative Census Block <em>(Jipgegu)</em></h2>
+<p>Developed boundary map of the smallest(block) unit among the boundaries announced by the National Statistic Office(NSO)</p>
+<ul>
+<li>Reference : NSO</li>
+<li>Time Period : 2015</li>
+<li>Data Collected: 1 year</li>
+<li>Data Type : .csv, .shp</li>
+<li>Spatial range : Seoul</li>
+<li>Coordinate system: Korean Central Belt 2000 (EPSG: 5181)</li>
+</ul>
+<table>
+<caption><span id="tab:foo">Table 2.1: </span> Jipgegu Attribution field</caption>
+<thead>
+<tr class="header">
+<th align="left">Field</th>
+<th align="left">Field Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Block code</td>
+<td align="left">Name of block</td>
+</tr>
+<tr class="even">
+<td align="left">Block name</td>
+<td align="left">X-coord of block cell centre</td>
+</tr>
+<tr class="odd">
+<td align="left">Centriod X-coord</td>
+<td align="left">X-coord of block cell centre</td>
+</tr>
+<tr class="even">
+<td align="left">Centriod Y-coord</td>
+<td align="left">Y-coord of block cell centre</td>
+</tr>
+<tr class="odd">
+<td align="left">Census tract code</td>
+<td align="left">Tract code</td>
+</tr>
+<tr class="even">
+<td align="left">City code</td>
+<td align="left">City code</td>
+</tr>
+<tr class="odd">
+<td align="left">Type of block</td>
+<td align="left">Large, Medium, Small</td>
+</tr>
+<tr class="even">
+<td align="left">Type of block buffer</td>
+<td align="left">Large, Medium, Small</td>
+</tr>
+<tr class="odd">
+<td align="left">Station influenced area</td>
+<td align="left">Block proximity to Station</td>
+</tr>
+<tr class="even">
+<td align="left">University area</td>
+<td align="left">Block proximity to a University zone</td>
+</tr>
+</tbody>
+</table>
+<p>Providing a spatial unit that understands a specific area (100 persons per block) </br> Providing a spatial unit that further subdivides administrative boundaries, such as dong, for finer analysis of market characteristics in the region </br> The number of block accounts for 20% of NSO block </br> Resident blocks in non-apartment accounts for 60-80 persons</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="patients.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="introduction-of-seoul.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="population.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

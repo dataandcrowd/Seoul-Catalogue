@@ -1,7 +1,7 @@
 --- 
 title: "Seoul Data Catalogue"
 author: "신혜섭-Hyesop Shin"
-date: "r Sys.Date()"
+date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
@@ -16,7 +16,7 @@ Hello, welcome to this website! This site offers a handful of data from Seoul, i
 population, housing, landuse, industry, traffic, society, hospitality, and environment. Note that this page hasn't got
 any license to it, so you can look through my explanation and examples, and copy them without permission.
 
-```{r, echo=FALSE, fig.height=8, fig.width=6, fig.show='hold',fig.align='center'}
+```{r, echo=FALSE, fig.height=8, fig.width=6, fig.show= "hold", fig.align= "center"}
 knitr::include_graphics("images/01_intro.png")
 ```
 
@@ -32,14 +32,15 @@ knitr::include_graphics("images/01_intro.png")
 - Currency: Won
 
 ## City Hierarchy
-```{r, echo=FALSE, fig.height=8, fig.width=6, fig.show="hold" fig.align= "center"} 
+
+```{r, echo=FALSE, fig.height=8, fig.width=6, fig.show= "hold", fig.align= "center"}
 knitr::include_graphics("images/02_boundary.png")
 ```
 
 The city has four hierarchies, Si, Gu, Dong, and *Jipgegu*, from city to block level. Within the *Si*(city) scale, Seoul has 25 administrative districts, gu, of which the spatial size is similar to the boroughs in London. The river Han penetrates horizontally through the city centre, from east to west, which divides 14 gus to the north, and 11 to the south.</br>
 Each gu comprises two types of boundaries as *Hengjeong dong*s and *Beopjeong dong*s. *Hengjeong dong*s were established for administrative convenience, such as resident registration. These *dong*s could be consolidated, divided, or founded due to population increase or decrease. *Beopjeong dong*s are towns or villages that were left for historical significance (Legal dongs were based on cadastral maps made from the Land investigation project during the Japanese colonial years). As of 2014, Seoul has 424 administrative dongs and 467 legal dongs. The finest scale is *Jipgegu*, or census block. This boundary is mainly to retrieve the population from a minimum statistical area, thus does not function as an administrative unit. Each Jipgegu consists of 60-500 residents, and the boundaries are renewed every year. As of 2013, Seoul has 16,470 jipgegus. All boundary data were provided in a shapefile in a 5-year period from 1975-2015, except the *Jipgegu* where the last update was in 2015.
 
-<!--chapter:end:01-Introduction-of-Seoul.Rmd-->
+<!--chapter:end:01-Introduction-to-Seoul.Rmd-->
 
 # Spatial Boundary
 
