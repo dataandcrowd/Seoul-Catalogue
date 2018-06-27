@@ -3,7 +3,7 @@ bookdown::gitbook:
   config:
     toc:
       before: |
-        <li><a href="./">Data Catalog for Seoul</a></li>
+        <li><a href="./">Data Catalogue for Seoul</a></li>
       after: |
         <li><a href="https://github.com/mrsensible/catalog" target="blank">To visit GIT</a></li>
     download: ["pdf", "epub"]
@@ -14,3 +14,6 @@ bookdown::pdf_book:
   citation_package: natbib
   keep_tex: yes
 bookdown::epub_book: default
+bookdown::html_book:
+  css: toc.css
+documentclass: book

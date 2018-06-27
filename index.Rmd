@@ -12,9 +12,9 @@ description: "This is an introduction to Hyesop's Ph.D data for Seoul city."
 
 # Preface {-}
 
-Hello, welcome to this website! This site offers a handful of data from Seoul, including geospatial data,
-population, housing, landuse, industry, traffic, society, hospitality, and environment. Note that this page hasn't got
-any license to it, so you can look through my explanation and examples, and copy them without permission.
+Hello, welcome to my website! This site offers a handful of geospatial data of Seoul, including population,
+housing, landuse, industry, traffic, society, hospitality, and environment. Feel free to browse through
+this book, and drop me a note if you have any enquiries.
 
 ```{r, echo=FALSE, fig.height=8, fig.width=6, fig.show= "hold", fig.align= "center"}
 knitr::include_graphics("images/01_intro.png")
