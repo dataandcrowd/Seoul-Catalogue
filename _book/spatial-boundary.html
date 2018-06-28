@@ -25,7 +25,7 @@
 <meta name="author" content="신혜섭-Hyesop Shin">
 
 
-<meta name="date" content="2018-06-26">
+<meta name="date" content="2018-06-28">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -111,15 +111,7 @@
 <h1><span class="header-section-number">Chapter 2</span> Spatial Boundary</h1>
 <div id="administrative-district-gu" class="section level2">
 <h2><span class="header-section-number">2.1</span> Administrative District <em>(Gu)</em></h2>
-<p>A sub municipal unit in South Korea. Cities over 500,000 people are allowed to have a gu.</p>
-<ul>
-<li>Total number in Seoul: 25</li>
-<li>Coordinate system: Korean Central Belt 2000 (EPSG: 5181)</li>
-<li>Columns: City code, Gu code, Gu name, Gu area</li>
-<li>Largest / Smallest</li>
-<li>Area: Seocho(47km2) / Jung(9.96km2)</li>
-<li>Population: Songpa(640,830) / Jung(117,781)</li>
-</ul>
+<p><em>Gu</em>, is a sub-municipal unit in South Korea. A city with a population of 500,000 persons is regulated as a <em>gu</em>. Seoul has 25 <em>gu</em>s, of which the area and population varies. Seocho has the largest area (47<span class="math inline">\(km^2\)</span>) whereas Jung has the smallest (9.96<span class="math inline">\(km^2\)</span>). Songpa and Jung are the most and least populated areas, which are approximately 640,830 and 117,781 persons. To find out more see <a href="https://en.wikipedia.org/wiki/List_of_districts_of_Seoul" class="uri">https://en.wikipedia.org/wiki/List_of_districts_of_Seoul</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
 <img src="images/03_gu.png" alt="\label{fig:figs}Gu in Seoul" width="776" />
 <p class="caption">
@@ -129,33 +121,16 @@ Figure 2.1: Gu in Seoul
 </div>
 <div id="census-tracts-dong" class="section level2">
 <h2><span class="header-section-number">2.2</span> Census tracts <em>(Dong)</em></h2>
-<p>The smallest level of urban government to have its own office and staff in South Korea</br></p>
-<p>Types: administrative dong, legal-status dong</p>
-<ul>
-<li>Administrative dong: Name of the community office that controls the place. All administrative works as well as clinics are based on this level</li>
-<li>Legal-status dong: A traditional area (town, village) name. The name of a unique region that serves as an address</li>
-</ul>
-<p>Total number</p>
-<ul>
-<li>Administrative dong (2014): 423</li>
-<li>Legal-status dong (2014): 469</li>
-<li>Coordinate system: Korean Central Belt 2000 (EPSG: 5181)</li>
-<li>Columns: Base year, admin code, admin name</li>
-<li>Largest / Smallest</li>
-<li>Population: Gil-dong, Songpa-gu (49,535) / Sogong-dong, Jung-gu (735)</li>
-</ul>
+<p><em>Dong</em>, known as census tracts, are the smallest boundary of which the authority is owned by the urban government. Each gu comprises two types of boundaries as <em>Hengjeong dong</em>s and <em>Beopjeong dong</em>s. <em>Hengjeong dong</em>s, sub-municipal districts, were established for administrative convenience, such as resident registration. These <em>dong</em>s could be consolidated, divided, or founded due to population increase or decrease e.g. Jongno 1-2-3-4ga dong. <em>Beopjeong dong</em>s, legal districts, are towns or villages that were left for historical significance (Legal dongs were based on cadastral maps made from the Land investigation project during the Japanese colonial years). Due to its historial and symbolic meanings, people tend to remember the names easier than administrative ones. As of 2014, Seoul has 424 administrative dongs and 467 legal dongs. Gildong in Songpa district was most populated area in 2014 at 49,535 persons, whereas Sogongdong in Jung district was the least populated at 735 persons.</p>
+<pre><code>## OGR data source with driver: ESRI Shapefile 
+## Source: &quot;D:\github\catalogue\chapter2\Seoul_Dong_Admin.shp&quot;, layer: &quot;Seoul_Dong_Admin&quot;
+## with 423 features
+## It has 4 fields
+## Integer64 fields read as strings:  DONG_CODE</code></pre>
 </div>
 <div id="administrative-census-block-jipgegu" class="section level2">
 <h2><span class="header-section-number">2.3</span> Administrative Census Block <em>(Jipgegu)</em></h2>
-<p>Developed boundary map of the smallest(block) unit among the boundaries announced by the National Statistic Office(NSO)</p>
-<ul>
-<li>Reference : NSO</li>
-<li>Time Period : 2015</li>
-<li>Data Collected: 1 year</li>
-<li>Data Type : .csv, .shp</li>
-<li>Spatial range : Seoul</li>
-<li>Coordinate system: Korean Central Belt 2000 (EPSG: 5181)</li>
-</ul>
+<p>The finest scale is <em>Jipgegu</em>, or census block. This boundary is mainly to retrieve the population from a minimum statistical area, thus does not function as an administrative unit. Each Jipgegu consists of 60-500 residents, and the boundaries are renewed every year. As of 2013, Seoul has 16,470 jipgegus. All boundary data were provided in a shapefile in a 5-year period from 1975-2015, except the <em>Jipgegu</em> where the last update was in 2016.</p>
 <table>
 <caption><span id="tab:foo">Table 2.1: </span> Jipgegu Attribution field</caption>
 <thead>
@@ -258,6 +233,19 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "";
+    if (src === "" || src === "true") src = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(src))
+      src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

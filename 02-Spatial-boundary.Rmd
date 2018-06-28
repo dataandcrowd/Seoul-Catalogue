@@ -1,49 +1,33 @@
 # Spatial Boundary
 
 ## Administrative District *(Gu)*
-A sub municipal unit in South Korea. Cities over 500,000 people are allowed to have a gu.
-
-- Total number in Seoul: 25
-- Coordinate system: Korean Central Belt 2000 (EPSG: 5181)
-- Columns: City code, Gu code, Gu name, Gu area
-- Largest / Smallest
-- Area: Seocho(47km2) / Jung(9.96km2)
-- Population: Songpa(640,830) / Jung(117,781)
+*Gu*, is a sub-municipal unit in South Korea. A city with a population of 500,000 persons is regulated as a *gu*.
+Seoul has 25 *gu*s, of which the area and population varies. Seocho has the largest area (47$km^2$) whereas Jung has the smallest (9.96$km^2$).
+Songpa and Jung are the most and least populated areas, which are approximately 640,830 and 117,781 persons. To find out more see https://en.wikipedia.org/wiki/List_of_districts_of_Seoul.
 
 ```{r, echo=FALSE, fig.height=8, fig.width=6, fig.show='hold',fig.align='center',fig.cap="\\label{fig:figs}Gu in Seoul"}
 knitr::include_graphics("images/03_gu.png")
 ```
 
+
 ## Census tracts *(Dong)*
-The smallest level of urban government to have its own office and staff in South Korea</br>
+*Dong*, known as census tracts, are the smallest boundary of which the authority is owned by the urban government.
+Each gu comprises two types of boundaries as *Hengjeong dong*s and *Beopjeong dong*s. *Hengjeong dong*s, sub-municipal districts, were established for administrative convenience, such as resident registration. These *dong*s could be consolidated, divided, or founded due to population increase or decrease e.g. Jongno 1-2-3-4ga dong. *Beopjeong dong*s, legal districts, are towns or villages that were left for historical significance (Legal dongs were based on cadastral maps made from the Land investigation project during the Japanese colonial years). Due to its historial and symbolic meanings, people tend to remember the names easier than administrative ones. As of 2014, Seoul has 424 administrative dongs and 467 legal dongs. Gildong in Songpa district was most populated area in 2014 at 49,535 persons, whereas Sogongdong in Jung district was the least populated at 735 persons.
 
-Types: administrative dong, legal-status dong
+```{r, echo= FALSE, message = FALSE}
+library(tmap)
+library(tmaptools)
+library(rgdal)
+seouldong <- readOGR("chapter2/Seoul_Dong_Admin.shp")
+s <- tm_shape(seouldong) +
+     tm_fill(col = "adm_dr_nm_")
 
-- Administrative dong: Name of the community office that controls the place. All administrative works as well as clinics are based on this level
-- Legal-status dong: A traditional area (town, village) name. The name of a unique region that serves as an address
 
-
-Total number
-
-- Administrative dong (2014): 423
-- Legal-status dong (2014): 469
-- Coordinate system: Korean Central Belt 2000 (EPSG: 5181)
-- Columns: Base year, admin code, admin name
-- Largest / Smallest
-- Population: Gil-dong, Songpa-gu (49,535) / Sogong-dong, Jung-gu (735)
-
+```
 
 
 ## Administrative Census Block *(Jipgegu)*
-Developed boundary map of the smallest(block) unit among the boundaries announced by the National Statistic Office(NSO)
-
-- Reference : NSO
-- Time Period : 2015
-- Data Collected: 1 year
-- Data Type : .csv, .shp
-- Spatial range : Seoul
-- Coordinate system: Korean Central Belt 2000 (EPSG: 5181)
-
+The finest scale is *Jipgegu*, or census block. This boundary is mainly to retrieve the population from a minimum statistical area, thus does not function as an administrative unit. Each Jipgegu consists of 60-500 residents, and the boundaries are renewed every year. As of 2013, Seoul has 16,470 jipgegus. All boundary data were provided in a shapefile in a 5-year period from 1975-2015, except the *Jipgegu* where the last update was in 2016.
 
 Table: (\#tab:foo) Jipgegu Attribution field
 
@@ -59,8 +43,6 @@ Table: (\#tab:foo) Jipgegu Attribution field
 | Type of block buffer | Large, Medium, Small|
 | Station influenced area | Block proximity to Station|
 | University area | Block proximity to a University zone|
-
-
 
 Providing a spatial unit that understands a specific area (100 persons per block) </br>
 Providing a spatial unit that further subdivides administrative boundaries, such as dong,
