@@ -25,7 +25,7 @@
 <meta name="author" content="신혜섭-Hyesop Shin">
 
 
-<meta name="date" content="2018-06-28">
+<meta name="date" content="2018-06-29">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -47,6 +47,14 @@
 
 
 
+<script src="libs/htmlwidgets-1.2/htmlwidgets.js"></script>
+<link href="libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="libs/datatables-binding-0.4/datatables.js"></script>
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="libs/dt-core-1.10.16/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="libs/dt-core-1.10.16/js/jquery.dataTables.min.js"></script>
+<link href="libs/crosstalk-1.0.0/css/crosstalk.css" rel="stylesheet" />
+<script src="libs/crosstalk-1.0.0/js/crosstalk.min.js"></script>
 
 
 
@@ -113,9 +121,9 @@
 <h2><span class="header-section-number">2.1</span> Administrative District <em>(Gu)</em></h2>
 <p><em>Gu</em>, is a sub-municipal unit in South Korea. <em>Gu</em> is normally regulated when a city has at least a population of 500,000 persons. Seoul has 25 <em>gu</em>s, of which the area and population varies. Seocho has the largest area (47<span class="math inline">\(km^2\)</span>) whereas Jung has the smallest (9.96<span class="math inline">\(km^2\)</span>). Songpa and Jung are the most and least populated areas, which are approximately 640,830 and 117,781 persons. To find out more see <a href="https://en.wikipedia.org/wiki/List_of_districts_of_Seoul" class="uri">https://en.wikipedia.org/wiki/List_of_districts_of_Seoul</a>.</p>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
-<img src="images/03_gu.png" alt="\label{fig:figs}Gu in Seoul" width="776" />
+<img src="images/03_gu.png" alt="\label{fig:figs} Districts(Gu) in Seoul" width="776" />
 <p class="caption">
-Figure 2.1: Gu in Seoul
+Figure 2.1:  Districts(Gu) in Seoul
 </p>
 </div>
 </div>
@@ -123,9 +131,9 @@ Figure 2.1: Gu in Seoul
 <h2><span class="header-section-number">2.2</span> Census tracts <em>(Dong)</em></h2>
 <p><em>Dong</em>, known as census tracts, are the smallest boundary of which the authority is owned by the urban government. Each gu comprises two types of boundaries as <em>Hengjeong dong</em>s and <em>Beopjeong dong</em>s. <em>Hengjeong dong</em>s, sub-municipal districts, were established for administrative convenience, such as resident registration. These <em>dong</em>s could be consolidated, divided, or founded due to population increase or decrease e.g. Jongno 1-2-3-4ga dong. <em>Beopjeong dong</em>s, legal districts, are towns or villages that were left for historical significance (Legal dongs were based on cadastral maps made from the Land investigation project during the Japanese colonial years). Due to its historial and symbolic meanings, people tend to remember the names easier than administrative ones. As of 2014, Seoul has 424 administrative dongs and 467 legal dongs. Gildong in Songpa district was most populated area in 2014 at 49,535 persons, whereas Sogongdong in Jung district was the least populated at 735 persons.</p>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
-<img src="images/04_dong.png" alt="\label{fig:figs} Dong in Gangnam" width="468" />
+<img src="images/04_dong.png" alt="\label{fig:figs} Census tracts(Dong) in Gangnam" width="468" />
 <p class="caption">
-Figure 2.2:  Dong in Gangnam
+Figure 2.2:  Census tracts(Dong) in Gangnam
 </p>
 </div>
 </div>
@@ -180,7 +188,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["catalogue.pdf", "catalogue.epub"],
+"download": [["catalogue.pdf", "PDF"], ["catalogue.epub", "EPUB"]],
 "toc": {
 "collapse": "subsection"
 }

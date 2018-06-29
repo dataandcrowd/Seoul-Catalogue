@@ -1,54 +1,44 @@
 # Population
 
 ## Population Census
-Population data of residence
+The population of Seoul and the great metropolitan area *Sudo-gwon*, has increased consistently as the national economy developed, where high demand of job, education, and public transport have been created. Korean's rapid urbanisation affected the rural citizens migrate to the *Sudo-gwon* area, resulting in reformations in administrative boundaries. Have a look at the census table below:
 
-- Reference: Korean Statistics Office
-- Time Period : 2011 - 2015
-- Data Collected: Monthly
-- Data Type : .csv
-- Spatial range : Seoul
-</br>
+```{r popDF, fig.cap= "Sudo-gwon(Great) metropolitan area", echo=FALSE, warning=FALSE,message=FALSE}
+library(tidyverse)
+library(readxl)
 
-| Field | Description |
-|:------------|:-----------|
-| std_yy | Baseline year |
-| std_mt | Baseline month |
-| sexdstn_cd | Sex |
-| agrde_cd | Age group |
-| rspop_cnt | Population |
-| adstrd_cd | Census tract code |
-| signgu_cd | City code |
+path <- ("chp3-files/sudo_pop.xlsx")
+pop<- path %>% 
+      excel_sheets() %>% 
+      set_names() %>% 
+      map(read_excel, path = path)
 
-</br>
-</br>
+new_col_name <- c("sd_nm", "sgg" ,"sd_cd", "sgg_cd", "sgg_nm_kr", "pop_total", "pop_male", "pop_female")
+
+popList  <- lapply(pop, setNames, nm = new_col_name)
+popList2 <- lapply(popList, function(x) cbind(x, year = ""))
+
+for (i in 1:9) {
+  popList2[[i]]$year <- 1970 + (i * 5)
+}
+popDF <- do.call(rbind, popList2)
+DT::datatable(popDF, rownames = FALSE)
+```
+
+The rate of population growth in the period 1975-2015 is shown in [Figure 3.2]. The yellow bars account for the overall population in South Korea in every 5 years. The blue and green line shows the rate of the population in the Sudogwon and the non-Sudogwon respectively. It clearly shows that the population around Seoul has gradually increased from around 30% to 49.5% in 40 years.
 
 
-## Employees at Working place
-Data on the number of employees per census block, based on the basic survey data of the business
+In 1975, the total population in the Sudogwon area was just over 30%, then rose to around 45% in 1995. The figures continued to increase until it reached 49.5% in the 2015 census. It is therefore clear that people have constantly migrated to Seoul since 1975, and if these patterns continue, migration to Sudogwon is likely to outstrip migration to Non-Sudogwon in the coming years. </br>
+```{r, echo=FALSE, fig.height=8, fig.width=6, fig.show='hold',fig.align='center',fig.cap="\\label{fig:figs} Temporal patterns of population rate between Sudogwon and Non-Sudogwon area"}
+knitr::include_graphics("images/06_graph.png")
+```
 
-• Reference: Seoul city 
-• Time Period : 2011 - 2013
-• Data Collected: Annually
-• Data Type : .csv
-• Spatial range : Seoul
-</br>
 
 
 ## De Facto Population
-구분: 인구/가구 </br>
-데이터셋명: 생활인구 </br>
-자료유형: 속성(csv) </br>
-시간범위: 2017.01.01-2018.04.18 </br>
-공간범위: 서울전역 </br>
-적재주기: 월 </br>
-제공기관: KT </br>
+*De facto population* is a recently introduced, estimated population based on LTE mobile data. This data is designed to capture real-time population by receiving signals from nearby stations every hour, by census block to district scale. Recent news says that the LTE users have overshot 50 million registration, meaning that people who have mobile tend to use the LTE service. The youth and elderly who have low LTE registration rate is replaced by the living population from the Census data. The estimated numbers were rounded from 5 decimal points (e.g. 422.10294 -> 422 persons), therefore the sum of each value may not match the total sum.
 
-파일명:</br>
-- 내국인: SE_SPOP_LOCAL_RESD_YYMM </br>
-- 외국단기: SE_SPOP_TEMP_RESD_YYMM </br>
-- 외국장기: SE_SPOP_LONG_RESD_YYMM </br>
-- 대도시권 생활인구: SE_SPOP_ORGN_CT_YYMM </br>
-- 데이터셋설명: 생활인구란 거주인구가 아닌 실제로 생활하는 인구로, 1시간 단위로 서울시 전체, 자치구별, 행정동별, 집계구별로 서울을 커버하는 KT의 통신기지국(LTE 시그널 데이터 기반)에 존재하는 인구를 기초로 추정함. LTE가입률이 떨어지는 저연령과 고연령층은 주민등록인구비율을 반영하여 생활인구를 대체함. 그리고 장단기체류 외국인은 국내 휴대폰에 가입한 외국인의 이용정보와 국내의 로밍서비스를 받는 외국인 정보를 활용하여 생활인구 추계과정과 동일하게 접근하고 국적별로 보정함. '대도시권' 데이터는 생활인구 데이터에 대도시권의 거주지 코드를 포함한 데이터임
-추정된 데이터로 소수점(5자리) 이하값이 있으며, 각 값의 합은 전체합계와 일치하지 않을 수 있음
+*Foreign residents* using either Korean LTE SIM cards or overseas roam service are estimated in the same way as it was for domestic users. You can easily filter foreign population by nationalities.
+
+*Metropolitan residents* are people who live outside Seoul but commute to the city everyday. Because more than 10 million commuters from bed towns - from Gwacheon to airport newtowns near Incheon airport - commute to Seoul, this data gives includes a district code to give an overview of their flows.
 

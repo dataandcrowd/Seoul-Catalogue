@@ -85,7 +85,7 @@
   \postauthor{\par}
       \predate{\centering\large\emph}
   \postdate{\par}
-    \date{2018-06-28}
+    \date{2018-06-29}
 
 \usepackage{booktabs}
 
@@ -133,46 +133,20 @@ city to block level. Within the \emph{Si}(city) scale, Seoul has 25
 administrative districts, gu, of which the spatial size is similar to
 the boroughs in London. The river Han penetrates horizontally through
 the city centre, from east to west, which divides 14 gus to the north,
-and 11 to the south. Each gu comprises two types of boundaries as
-\emph{Hengjeong dong}s and \emph{Beopjeong dong}s. \emph{Hengjeong
-dong}s were established for administrative convenience, such as resident
-registration. These \emph{dong}s could be consolidated, divided, or
-founded due to population increase or decrease. \emph{Beopjeong dong}s
-are towns or villages that were left for historical significance (Legal
-dongs were based on cadastral maps made from the Land investigation
-project during the Japanese colonial years). As of 2014, Seoul has 424
-administrative dongs and 467 legal dongs. The finest scale is
-\emph{Jipgegu}, or census block. This boundary is mainly to retrieve the
-population from a minimum statistical area, thus does not function as an
-administrative unit. Each Jipgegu consists of 60-500 residents, and the
-boundaries are renewed every year. As of 2013, Seoul has 16,470
-jipgegus. All boundary data were provided in a shapefile in a 5-year
-period from 1975-2015, except the \emph{Jipgegu} where the last update
-was in 2015.
+and 11 to the south.
 
 \chapter{Spatial Boundary}\label{spatial-boundary}
 
 \section{\texorpdfstring{Administrative District
 \emph{(Gu)}}{Administrative District (Gu)}}\label{administrative-district-gu}
 
-A sub municipal unit in South Korea. Cities over 500,000 people are
-allowed to have a gu.
-
-\begin{itemize}
-\tightlist
-\item
-  Total number in Seoul: 25
-\item
-  Coordinate system: Korean Central Belt 2000 (EPSG: 5181)
-\item
-  Columns: City code, Gu code, Gu name, Gu area
-\item
-  Largest / Smallest
-\item
-  Area: Seocho(47km2) / Jung(9.96km2)
-\item
-  Population: Songpa(640,830) / Jung(117,781)
-\end{itemize}
+\emph{Gu}, is a sub-municipal unit in South Korea. \emph{Gu} is normally
+regulated when a city has at least a population of 500,000 persons.
+Seoul has 25 \emph{gu}s, of which the area and population varies. Seocho
+has the largest area (47\(km^2\)) whereas Jung has the smallest
+(9.96\(km^2\)). Songpa and Jung are the most and least populated areas,
+which are approximately 640,830 and 117,781 persons. To find out more
+see \url{https://en.wikipedia.org/wiki/List_of_districts_of_Seoul}.
 
 \begin{figure}
 
@@ -180,105 +154,57 @@ allowed to have a gu.
 
 }
 
-\caption{\label{fig:figs}Gu in Seoul}\label{fig:unnamed-chunk-3}
+\caption{\label{fig:figs} Districts(Gu) in Seoul}\label{fig:unnamed-chunk-3}
 \end{figure}
 
 \section{\texorpdfstring{Census tracts
 \emph{(Dong)}}{Census tracts (Dong)}}\label{census-tracts-dong}
 
-The smallest level of urban government to have its own office and staff
-in South Korea
-
-Types: administrative dong, legal-status dong
-
-\begin{itemize}
-\tightlist
-\item
-  Administrative dong: Name of the community office that controls the
-  place. All administrative works as well as clinics are based on this
-  level
-\item
-  Legal-status dong: A traditional area (town, village) name. The name
-  of a unique region that serves as an address
-\end{itemize}
+\emph{Dong}, known as census tracts, are the smallest boundary of which
+the authority is owned by the urban government. Each gu comprises two
+types of boundaries as \emph{Hengjeong dong}s and \emph{Beopjeong
+dong}s. \emph{Hengjeong dong}s, sub-municipal districts, were
+established for administrative convenience, such as resident
+registration. These \emph{dong}s could be consolidated, divided, or
+founded due to population increase or decrease e.g.~Jongno 1-2-3-4ga
+dong. \emph{Beopjeong dong}s, legal districts, are towns or villages
+that were left for historical significance (Legal dongs were based on
+cadastral maps made from the Land investigation project during the
+Japanese colonial years). Due to its historial and symbolic meanings,
+people tend to remember the names easier than administrative ones. As of
+2014, Seoul has 424 administrative dongs and 467 legal dongs. Gildong in
+Songpa district was most populated area in 2014 at 49,535 persons,
+whereas Sogongdong in Jung district was the least populated at 735
+persons.
 
 \begin{figure}
 
-{\centering \includegraphics[width=18.39in]{images/04_dong} 
+{\centering \includegraphics[width=12.99in]{images/04_dong} 
 
 }
 
-\caption{\label{fig:figs}Census tracts in Seoul}\label{fig:unnamed-chunk-4}
+\caption{\label{fig:figs} Census tracts(Dong) in Gangnam}\label{fig:unnamed-chunk-4}
 \end{figure}
-
-Total number
-
-\begin{itemize}
-\tightlist
-\item
-  Administrative dong (2014): 423
-\item
-  Legal-status dong (2014): 469
-\item
-  Coordinate system: Korean Central Belt 2000 (EPSG: 5181)
-\item
-  Columns: Base year, admin code, admin name
-\item
-  Largest / Smallest
-\item
-  Population: Gil-dong, Songpa-gu (49,535) / Sogong-dong, Jung-gu (735)
-\end{itemize}
 
 \section{\texorpdfstring{Administrative Census Block
 \emph{(Jipgegu)}}{Administrative Census Block (Jipgegu)}}\label{administrative-census-block-jipgegu}
 
-Developed boundary map of the smallest(block) unit among the boundaries
-announced by the National Statistic Office(NSO)
+The finest scale is \emph{Jipgegu}, or census block. This boundary is
+mainly to retrieve the population from a minimum statistical area, thus
+does not function as an administrative unit. Each Jipgegu consists of
+60-500 residents, and the boundaries are renewed every year. As of 2013,
+Seoul has 16,470 jipgegus. All boundary data were provided in a
+shapefile in a 5-year period from 1975-2015, except the \emph{Jipgegu}
+where the last update was in 2016.
 
-\begin{itemize}
-\tightlist
-\item
-  Reference : NSO
-\item
-  Time Period : 2015
-\item
-  Data Collected: 1 year
-\item
-  Data Type : .csv, .shp
-\item
-  Spatial range : Seoul
-\item
-  Coordinate system: Korean Central Belt 2000 (EPSG: 5181)
-\end{itemize}
+\begin{figure}
 
-\begin{longtable}[]{@{}ll@{}}
-\caption{\label{tab:foo} Jipgegu Attribution field}\tabularnewline
-\toprule
-Field & Field Description\tabularnewline
-\midrule
-\endfirsthead
-\toprule
-Field & Field Description\tabularnewline
-\midrule
-\endhead
-Block code & Name of block\tabularnewline
-Block name & X-coord of block cell centre\tabularnewline
-Centriod X-coord & X-coord of block cell centre\tabularnewline
-Centriod Y-coord & Y-coord of block cell centre\tabularnewline
-Census tract code & Tract code\tabularnewline
-City code & City code\tabularnewline
-Type of block & Large, Medium, Small\tabularnewline
-Type of block buffer & Large, Medium, Small\tabularnewline
-Station influenced area & Block proximity to Station\tabularnewline
-University area & Block proximity to a University zone\tabularnewline
-\bottomrule
-\end{longtable}
+{\centering \includegraphics[width=12.99in]{images/05_jip} 
 
-Providing a spatial unit that understands a specific area (100 persons
-per block) Providing a spatial unit that further subdivides
-administrative boundaries, such as dong, for finer analysis of market
-characteristics in the region The number of block accounts for 20\% of
-NSO block Resident blocks in non-apartment accounts for 60-80 persons
+}
+
+\caption{\label{fig:figs} Census block(Jipgyegu) in Gangnam}\label{fig:unnamed-chunk-5}
+\end{figure}
 
 \chapter{Population}\label{population}
 
