@@ -1,18 +1,21 @@
 --- 
 title: "Seoul Data Catalogue"
-author: "신혜섭-Hyesop Shin"
+author: "Hyesop Shin"
 date: "`r Sys.Date()`"
-site: bookdown::bookdown_site
+output: pdf_document
+description: This is an introduction to Hyesop's Ph.D data for Seoul city.
 documentclass: book
-bibliography: [book.bib, packages.bib]
-biblio-style: apalike
 link-citations: yes
-description: "This is an introduction to Hyesop's Ph.D data for Seoul city."
+bibliography:
+- book.bib
+- packages.bib
+site: bookdown::bookdown_site
+biblio-style: apalike
 ---
 # Preface {-}
 Hello, welcome to my website! This site offers a handful of geospatial data of Seoul, including population,
 housing, landuse, industry, traffic, society, hospitality, and environment. Feel free to browse through
 this book, and drop me a note if you have any enquiries.
-```{r, echo=FALSE, fig.height=8, fig.width=6, fig.show= "hold", fig.align= "center"}
+```{r, echo=FALSE, fig.height=3, fig.width=2, fig.show= "hold", fig.align= "center"}
 knitr::include_graphics("images/01_intro.png")
 ```
