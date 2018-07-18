@@ -16,6 +16,10 @@ biblio-style: apalike
 Hello, welcome to my website! This site offers a handful of geospatial data of Seoul, including population,
 housing, landuse, industry, traffic, society, hospitality, and environment. Feel free to browse through
 this book, and drop me a note if you have any enquiries.
+
+good morning!
+
+
 ```{r, echo=FALSE, fig.height=3, fig.width=2, fig.show= "hold", fig.align= "center"}
 knitr::include_graphics("images/01_intro.png")
 ```
